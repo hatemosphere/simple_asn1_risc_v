@@ -4,7 +4,9 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-crypto-bigint = { git = "https://github.com/hatemosphere/crypto-bigint-no-atomics", default-features = false, features = ["alloc"] }
+crypto-bigint = { git = "https://github.com/hatemosphere/crypto-bigint-no-atomics", default-features = false, features = [
+    "alloc",
+] }
 hex = { version = "0.4", default-features = false, features = ["alloc"] }
 hashbrown = { version = "0.14", default-features = false }
 
