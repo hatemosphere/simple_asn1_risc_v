@@ -4,10 +4,12 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-crypto-bigint = { workspace = true }
-hex = { workspace = true }
-hashbrown = { workspace = true }
-pdf-logger = { path = "../logger" }
+crypto-bigint = { git = "https://github.com/hatemosphere/crypto-bigint-no-atomics", default-features = false, features = ["alloc"] }
+hex = { version = "0.4", default-features = false, features = ["alloc"] }
+hashbrown = { version = "0.14", default-features = false }
 
 # Note: thiserror doesn't support no_std well, we'll replace with custom errors
 # Note: time crate has limited no_std support, we'll handle dates differently if needed
+
+[patch.crates-io]
+crypto-bigint = { git = "https://github.com/hatemosphere/crypto-bigint-no-atomics" }
